@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI - ApotekPW</title>
+    <script src="BMI.js"></script>
+    <link rel="stylesheet" href="BMI.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navabar -->
+    <section id="header">
+      <a href="homePage.html">
+        <h4 class="logo">ApotekPW</h4>
+      </a>
+
+      <div>
+        <ul id="navbar">
+          <li><a href="homePage.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Buy</a></li>
+          <li><a href="#">BMI</a></li>
+          <li class="active"><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+          <!-- <div>
+                      <button id="login"><a href="#" style="color: black;">Login</a></button>
+                      <button id="register"><a href="#" style="color: black;">Register</a></button>
+                  </div> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Input kalkulator BMI -->
+    <section id="hero">
+      <div class="container">
+        <div class="forms">
+          <div class="form register">
+            <span class="title">Kalkulator BMI</span>
+
+            <form action="#">
+              <div class="input-field">
+                <input type="text" id="height" placeholder="Masukkan tinggi badan anda" required />
+                <i class="fa-solid fa-weight-scale"></i>
+            </div>
+
+              <div class="input-field">
+                <input type="text" id="Weight" placeholder="Masukkan berat badan anda"
+                  required
+                />
+                <i class="fa-solid fa-weight-scale"></i>
+              </div>
+
+
+              <div class="input-field button">
+                <input type="button" id="btn" value="Hitung" />
+                <div id="result"></div>
+                <!-- <input type="button" action="submit" onclick="startlog()" value="Login">
+                          <p id="akses"></p> -->
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="Wadah">
+        <div class="container">
+          <div class="forms">
+            <div class="form bmi">
+                <span class="judul">BMI Calculator</span>
+                
+                <p>Height (in cm)</p>
+                <input type="text" id="height" />
+                
+                <p>Weight (in kg)</p>
+                <input type="text" id="weight" />
+                
+                <button id="btn">Hitung</button>
+                
+                <div id="result"></div>
+            </div>
+      </div>
+    </section> -->
+  </body>
 </html>
