@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - ApotekPW</title>
+    <link rel="stylesheet" href="register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <section id="header">
+      <a href="homePage.html">
+        <h4 class="logo">ApotekPW</h4>
+      </a>
+
+      <div>
+        <ul id="navbar">
+          <li><a href="homePage.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Buy</a></li>
+          <li><a href="#">BMI</a></li>
+          <li class="active"><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+          <!-- <div>
+                    <button id="login"><a href="#" style="color: black;">Login</a></button>
+                    <button id="register"><a href="#" style="color: black;">Register</a></button>
+                </div> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Form Register -->
+    <section id="hero">
+      <div class="container">
+        <div class="forms">
+          <div class="form register">
+            <span class="title">Register</span>
+
+            <form action="#">
+              <div class="input-field">
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="Masukkan nama lengkap anda"
+                  required
+                />
+                <i class="fa-solid fa-id-card"></i>
+              </div>
+
+              <div class="input-field">
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Masukkan username anda"
+                  required
+                />
+                <i class="fa-solid fa-user"></i>
+              </div>
+
+              <div class="select">
+                <i class="fa-solid fa-venus-mars"></i>
+                <label for="cars">Jenis kelamin</label>
+                <select name="Jenis kelamin" id="gender">
+                  <optgroup label="Jenis kelamin">Jenis kelamin</optgroup>
+                  <option value="male">Laki-laki</option>
+                  <option value="female">Perempuan</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <input
+                  type="number"
+                  id="phonenumber"
+                  placeholder="Masukkan No. HP anda"
+                  required
+                />
+                <i class="fa-sharp fa-solid fa-phone"></i>
+              </div>
+
+<!-- Tempat lahir -->
+              <!-- <div class="input-field">
+                <input
+                  type="text"
+                  id="place"
+                  placeholder="Masukkan tempat lahir anda"
+                  required
+                />
+                <i class="uil uil-user"></i>
+              </div> -->
+<!-- Tanggal lahir -->
+              <!-- <div class="input-field">
+                <input
+                  type="date"
+                  id="birth"
+                  value=""
+                  min="" max=""
+                  required
+                />
+                <i class="uil uil-user"></i>
+              </div> -->
+
+              <div class="input-field">
+                <input
+                  type="password"
+                  id="password"
+                  class="password"
+                  placeholder="Masukkan password anda"
+                  required
+                />
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-eye-slash"></i>
+              </div>
+
+              <div class="input-field">
+                <input
+                  type="repassword"
+                  id="repassword"
+                  class="repassword"
+                  placeholder="Masukkan kembali password anda"
+                  required
+                />
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-eye-slash"></i>
+              </div>
+
+              <div class="checkbox-text">
+                <div class="checkbox-content">
+                  <input type="checkbox" id="logCheck" />
+                  <label for="logCheck" class="text">Dengan ini aya menyetujui <span><a href="#">S&K</a></span> serta Privasi Apotek.</label>
+                </div>
+              </div>
+             
+              <div class="input-field button">
+                <input type="button" id="btn" value="Register" />
+                <!-- <input type="button" action="submit" onclick="startlog()" value="Login">
+                        <p id="akses"></p> -->
+              </div>
+            </form>
+
+            <div class="login-signup">
+              <span class="text">Sudah punya akun? </span>
+              <a href="#" class="text signup-text"><br />Masuk!</a>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
