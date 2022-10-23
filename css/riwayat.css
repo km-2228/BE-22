@@ -1,0 +1,144 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #171427 ;
+    --text-color: #088178;
+    --bg-color: #fff;
+}
+
+body {
+    width: 100%;
+}
+
+/* header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: 0 5px rgba(0, 0, 0, 0.06);
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header .logo {
+    color: var(--text-color);
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-size: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: var(--text-color);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: var(--text-color);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#navbar button {
+    position: relative;
+    font-size: 16px;
+    font-size: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#navbar #login {
+    background-color: var(--text-color);
+    /* color: black; */
+}
+
+/* #navbar #register {
+    background-color: #088178;
+} */
+
+/* Tabel Riwayat */
+h1 {
+    margin-top: 50px;
+    margin-left: 10%;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: 10%;
+}
+
+.content-table thead tr {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(event) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #088178;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: var(--text-color);
+
+}

@@ -1,3 +1,32 @@
+// Data Obat
+let url = 
+    "https://63500c77df22c2af7b61ac65.mockapi.io/pemesanan_obat";
+
+    let option = {
+        method: "GET",
+    };
+    
+const getDataApi = () => {
+
+    fetch(url, option)
+        .then((response) => response.json())
+        .then((result) => {
+            let obatHTML = document.getElementById("data-obat");
+
+            result.forEach((item, index) => {
+                obatHTML.innerHTML += `<div class="product-box">
+                <img src="`+item.gambar+`" alt="" class="product-img">
+                <h2 class="product-title">`+item.nama_obat+`</h2>
+                <span class="price">Rp. `+item.harga+`</span>
+                <i class='bx bx-shopping-bag add-cart' onclick='addCartClicked(event)'></i>
+                </div>`;
+            })
+
+        })
+        .catch((error) => console.log(error));
+};
+getDataApi();
+
 // Cart 
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
@@ -55,6 +84,7 @@ function buyButtonClicked(){
         cartContent.removeChild(cartContent.firstChild);
     }
     updateTotal();
+    window.location.href = "http://127.0.0.1:5500/BE-22/riwayat.html";
 }
 
 // Remove item from cart
@@ -115,15 +145,27 @@ function addProductToCart(title, price, productImg){
 function updateTotal(){
     var cartContent = document.getElementsByClassName("cart-content")[0];
     var cartBoxes = cartContent.getElementsByClassName("cart-box");
+    var dataPem = [];
     var total = 0;
     for(var i = 0; i < cartBoxes.length; i++){
         var cartBox = cartBoxes[i]
+        var title = cartBox.getElementsByClassName("cart-product-title")[0]
         var priceElement = cartBox.getElementsByClassName("cart-price")[0]
         var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0]
         var price = parseFloat(priceElement.innerText.replace("Rp.", ""));
         var quantity = quantityElement.value;
+        var dataPembelian = {
+            nama_obat: title.innerHTML,
+            harga_obat: priceElement.innerText,
+            jumlah: quantity
+        }
+        dataPem.push(dataPembelian);
         total = (total + price * quantity);
     }
+    console.log(dataPem);
+    localStorage.setItem('pembelian', JSON.stringify(dataPem));
+    // var dataPem = localStorage.getItem('item') ? JSON.parse(localStorage.getItem('item')) : [];
+    // console.dir(localStorage.getItem('pembelian'));
 
         // // Jika harga nya koma/tidak genap
         // total = Math.round(total * 100) / 100;

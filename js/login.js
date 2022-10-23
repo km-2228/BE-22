@@ -3,6 +3,12 @@ const container = document.querySelector(".container"),
       pwFields = document.querySelectorAll(".password");
 
 // let button = document.getElementById('btn');
+document
+  .getElementById("btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    login();
+  });
 
 // js code untuk menampilkan/menyembunyikan kata sandi dan mengubah ikon
 pwShowHide.forEach(eyeIcon => {
@@ -25,27 +31,32 @@ pwShowHide.forEach(eyeIcon => {
     })
 })
 
-// startlog()
-// function startlog(){
-//     var login = document.getElementById('username').value + document.getElementById('password').value;
-//     var apoteker = ('apoteker') + ('apoteker123');
-//     if(login == apoteker){
-//         var logakses = document.getElementById('akses').innerHTML = 'Login Berhasil';
-//     } else{
-//         logakses = document.getElementById('akses').innerHTML = 'Login Gagal';
-//     }
-// }
+function login() {
+//   let dataUser = [];
+  let formData = {
+    username: document.getElementById("username").value,
+    password: document.getElementById("password").value,
+  };
 
-// button.addEventListener('click', () => {
-//     let user = document.getElementById('username').value;
-//     let pass = document.getElementById('password').value;
-//     var apoteker = ('apoteker') + ('apoteker123');
-//     if(user && pass == apoteker){
-//         var logakses = document.getElementById('akses').innerHTML = 'Login Berhasil';
-//     } else{
-//         logakses = document.getElementById('akses').innerHTML = 'Login Gagal';
-//     }
-// })
+  let url = "https://63500c77df22c2af7b61ac65.mockapi.io/user"; 
+
+  fetch(url) 
+    .then((response) => response.json())
+    .then((result) => {
+      result.forEach((data) => {
+        if (
+          data.username == formData.username &&
+          data.password == formData.password
+        ) {
+          alert("Berhasil Login");
+          window.location.href = "http://127.0.0.1:5500/BE-22/homePage-ApotekPW.html";
+        } 
+      }); 
+    })
+
+    .catch((error) => console.log(error));
+    
+}
 
 
 

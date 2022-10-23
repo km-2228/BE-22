@@ -1,0 +1,128 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #171427 ;
+    --text-color: #088178;
+    --bg-color: #fff;
+}
+
+body {
+    width: 100%;
+}
+
+/* header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    background: 0 5px rgba(0, 0, 0, 0.06);
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header .logo {
+    color: var(--text-color);
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-size: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: var(--text-color);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: var(--text-color);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* BMI */
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background: var(--text-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.head {
+    font-family: century;
+    font-size: 2rem;
+    text-align: center;
+    margin: 5px 0px;
+    color: var(--bg-color);
+}
+
+h4 {
+    text-align: center;
+    margin: 5px 0px;
+    color: var(--bg-color);
+}
+
+p {
+    color: var(--bg-color);
+}
+
+input {
+    outline: none;
+    border: 2px solid rgb(129, 126, 126);
+    padding: 5px;
+    border-radius: 5px;
+    width: 450px;
+    height: 40px;
+    margin: 10px 0px;
+    background-color: white;
+}
+
+button {
+    color: var(--bg-color);
+    background-color: #096660;
+    display: block;
+    width: 150px;
+    height: 42px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
