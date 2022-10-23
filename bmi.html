@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI - ApotekPW</title>
+    <link rel="stylesheet" href="css/bmi.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <section id="header">
+        <a href="homePage-ApotekPW.html">
+            <h4 class="logo">ApotekPW</h4>
+        </a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="homePage-ApotekPW.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="bmi.html" style="color: #088178;">BMI</a></li>
+                <li><a href="riwayat.html">Riwayat</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BMI -->
+    <div class="wrapper">
+        <h1 class="head">Check your BMI</h1>
+        <h4>Enter your weight and height below to check your BMI results</h4><br>
+        <p>Put your weight in here (KG)
+            <br><input type="text" id="weight"><br><span id="weight_error"></span>
+        </p>
+    
+        <p>Put your height in here (CM)
+            <br><input type="text" id="height"><br><span id="height_error"></span>
+        </p>
+    
+        <button id="btn">Calculate BMI</button>
+        <p id="output"></p>
+    </div>
+
+    <script src="js/bmi.js"></script>
+</body>
+</html>
