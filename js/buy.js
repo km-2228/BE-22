@@ -84,7 +84,7 @@ function buyButtonClicked(){
         cartContent.removeChild(cartContent.firstChild);
     }
     updateTotal();
-    window.location.href = "http://127.0.0.1:5500/BE-22/riwayat.html";
+    window.location.href = "./riwayat.html";
 }
 
 // Remove item from cart
