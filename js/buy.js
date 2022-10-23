@@ -83,7 +83,7 @@ function buyButtonClicked(){
     while (cartContent.hasChildNodes()){
         cartContent.removeChild(cartContent.firstChild);
     }
-    updateTotal();
+    // updateTotal();
     window.location.href = "./riwayat.html";
 }
 
