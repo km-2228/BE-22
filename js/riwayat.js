@@ -1,6 +1,6 @@
 console.log(JSON.parse(localStorage.getItem('pembelian')));
 var riwayat = JSON.parse(localStorage.getItem('pembelian'));
-var table = document.getElementById('riwayat-pem').innerHTML;
+var table = document.getElementById('riwayat-pem');
 
 if(riwayat.length > 0){
     riwayat.forEach(element => {
